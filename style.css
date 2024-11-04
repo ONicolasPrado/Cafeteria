@@ -1,14 +1,16 @@
 :root {
-  --main-color: #d3ad7f;
-  --black: #13131a;
-  --bg:#010103;
-  --border:0.1rem solid rgba(255,255,255,0.3);
+  --main-color: #324670;
+  --hover: #00AFEF;
+  --black: #4B4A4C;
+  --bg: #010103;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
 
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
-  outline: none;
+  s outline: none;
   border: none;
   text-decoration: none;
   text-transform: none;
@@ -16,7 +18,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
   background-color: var(--bg);
 }
 
@@ -40,18 +42,18 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: .2rem;
 }
 
 .navbar a {
-  margin:  0 1rem;
+  margin: 0 1rem;
   font-size: 1.8rem;
   color: #fff;
 }
 
 .navbar a:hover {
-  color: var(--main-color);
+  color: var(--hover);
   border-bottom: 0.1rem solid var(--main-color);
   font-size: 2rem;
 }
@@ -60,6 +62,7 @@ section {
   margin: 1rem;
   cursor: pointer;
 }
+
 .icons img:hover {
   width: 40px;
   height: 40px;
@@ -80,10 +83,16 @@ section {
 }
 
 .home-container {
-  background: url(./img/home-img.jpg);
   height: 100vh;
-  background-position: center;
-  background-size: cover;
+}
+
+.home-container .content .home-img {
+  display: flex;
+  position: absolute;
+  left: 65%;
+  top: 30%;
+  border-radius: 50%
+   
 }
 
 .home-container section {
@@ -102,15 +111,17 @@ section {
 }
 
 .content p {
+  width: 75%;
   color: #fff;
   font-size: 2rem;
   font-weight: 100;
   line-height: 1.8;
   padding: 1rem 0;
 }
+
 .title {
   font-size: 4rem;
-  color: var(--main-color);
+  color: var(--hover);
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -120,11 +131,17 @@ section {
   color: #fff;
   text-transform: uppercase;
 }
+
 .about .row {
   display: flex;
   align-items: center;
-  background-color: var(--black);
+  background-color: var(--bg);
   gap: 0.5rem;
+}
+
+.about .row img {
+  width: 40rem;
+  height: 40rem;
 }
 
 .about .row .content {
@@ -149,46 +166,52 @@ section {
   gap: 1.5rem;
 }
 
-.menu .box-container .box {
+.service .box-container .box {
   text-align: center;
   border: var(--border);
   padding: 2rem;
   cursor: pointer;
 }
 
-.menu .box-container .box img {
+.service .box-container .box img {
   height: 10rem;
+  border-radius: 10%;
 }
 
-.menu .box-container .box h3 {
+.service .box-container .box h3 {
   color: #fff;
   font-size: 2rem;
   padding: 1rem;
 }
 
-.menu .box-container .box .price {
+.service .box-container .box .price {
   color: #fff;
   font-size: 1.5rem;
   padding: 0.5rem 0;
 }
 
-.menu .box-container .box .price span {
+.service .box-container .box .price span {
   font-size: 1rem;
   text-decoration: line-through;
   font-weight: lighter;
   gap: 1rem;
 }
 
-.menu .box-container .btn {
+.service .box-container .btn {
   font-size: 1.5rem;
 }
 
-.menu .box-container .box:hover{
+.service .box-container .box:hover {
   background-color: #fff;
 }
 
-.menu .box-container .box:hover>* {
+.service .box-container .box:hover>* {
   color: var(--black);
+}
+
+.service .box-container .btn:hover {
+  background-color: var(--hover);
+  letter-spacing: normal;
 }
 
 .review .box-container .box {
@@ -208,7 +231,7 @@ section {
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
-  
+
 }
 
 .address {
@@ -240,5 +263,5 @@ section {
 }
 
 .footer .share img:hover {
-  background-color: var(--main-color);
+  background-color: var(--hover);
 }
